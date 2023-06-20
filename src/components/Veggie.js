@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
-import { json } from 'react-router-dom';
 
 
 export const Veggie = () => {
@@ -31,12 +30,9 @@ export const Veggie = () => {
     }
 
 
-
-
-
   };
 
- 
+  
 
   return (
     <div>
