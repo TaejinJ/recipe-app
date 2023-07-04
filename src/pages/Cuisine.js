@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import {motion} from 'framer-motion';
-import { Link,useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 export const Cuisine = () => {
   const [cuisine, setCuisine] = useState([]);
@@ -9,7 +9,7 @@ export const Cuisine = () => {
 
   
 const getCuisine = async (name) =>{
-  const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=10`)
+  const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`)
   const recipes = await data.json();
   setCuisine(recipes.results);
 };
